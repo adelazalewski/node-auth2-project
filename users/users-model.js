@@ -17,9 +17,14 @@ function findByUsername(username) {
     return db("users").where("username", username).first("id", "username", "password", "department")
 }
 
+function findByDepartment(department) {
+    return db("users").where("department", department).first("id", "username", "password", "department")
+}
+
 module.exports = {
     find,
     findById,
     findByUsername,
-    add
+    add,
+    findByDepartment
 }

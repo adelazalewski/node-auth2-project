@@ -1,3 +1,4 @@
+require('dotenv').config()
 const exppress = require("express");
 const server = exppress()
 const port = process.env.PORT || 5000;
